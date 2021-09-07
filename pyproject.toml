@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "local_project"
+version = "0.1.0"
+description = ""
+authors = ["Francesco Tamborra <francescotamborra@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.3.2"
+flatten-json = "^0.1.13"
+jupyter = "^1.0.0"
+matplotlib = "^3.4.3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.8b0"
+pylint = "^2.10.2"
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+)/
+'''
